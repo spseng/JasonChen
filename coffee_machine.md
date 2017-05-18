@@ -49,3 +49,17 @@ $ sudo ifdown wlan0
 $ sudo ifup wlan0
 ```
 And the WiFi worked.
+
+### Custom Website
+[Django](https://www.djangoproject.com/) is a popular Python web framework
+(for backends) that I used to create a
+[website](http://spscoffee.herokuapp.com/). It comes with many features and
+tools for development. I now know that for a simple website like this, I
+could have used a lightweight framework like 
+[Flask](http://flask.pocoo.org/), but Django was a pretty good choice.
+
+The gist of the website is that when you type the right password it lets
+you click the `Brew` button which updates a page on the website. The
+Raspberry Pi is constantly monitoring that page and once it updates the
+Pi will make coffee. 
+
