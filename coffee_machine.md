@@ -2,6 +2,7 @@
 
 I'm working on connecting a coffee machine to the internet so it can
 be turned on and off from a website or from twitter.
+Raspbian code [here](https://github.com/stardust66/CoffeeMakerRaspbian).
 
 ## Steps:
 
@@ -49,6 +50,9 @@ $ sudo ifdown wlan0
 $ sudo ifup wlan0
 ```
 And the WiFi worked.
+
+#### Monitor Website
+This is basically a Python script with a `while` loop with a 
 
 ### Custom Website
 [Django](https://www.djangoproject.com/) is a popular Python web framework
