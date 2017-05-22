@@ -38,6 +38,7 @@ and put the output as `hash:output` in the password field.
 Next, I edited `/etc/network/interfaces`:
 ```
 ...
+auto wlan0
 iface wlan0 inet dhcp
     wpa-ssid "SPS-Secure"
     pre-up wpa_supplicant -B -Dwext -i wlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf -f /var/log/wpa_supplicant.log
