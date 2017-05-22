@@ -52,7 +52,8 @@ $ sudo ifup wlan0
 And the WiFi worked.
 
 #### Monitor Website
-This is basically a Python script with a `while` loop with a 
+This is basically a Python script with a `while` loop that uses the Twitter
+API and the urllib module to check Twitter and check the website for states.
 
 ### Custom Website
 [Django](https://www.djangoproject.com/) is a popular Python web framework
@@ -67,3 +68,6 @@ you click the `Brew` button which updates a page on the website. The
 Raspberry Pi is constantly monitoring that page and once it updates the
 Pi will make coffee. 
 
+### TODO:
+- Add button to track if the coffee machine has been prepared.
+- Make coffee and water delivery system.
