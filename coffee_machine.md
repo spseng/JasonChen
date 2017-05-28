@@ -7,6 +7,11 @@ Raspbian code [here](https://github.com/stardust66/CoffeeMakerRaspbian).
 #### Current State:
 <img alt="Coffee Machine" src="images/coffee_final.jpg" width="500"/>
 
+#### Contents:
+- [Steps](#steps)
+- [Problems](#problems)
+- [TODO](#todo)
+
 ## Steps:
 
 ### Raspberry Pi:
