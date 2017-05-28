@@ -128,8 +128,8 @@ import datetime
 
 edt_time = utc_time - datetime.timedelta(hours=4)
 ```
-If the solution needs to be timezone independent, we should probably use
-a timezone management module.
+If the solution needs to be timezone independent, you should probably use
+a timezone management module like `pytz` or `pendulum`.
 
 ## TODO:
 - [x] Add button to track if the coffee machine has been prepared.
