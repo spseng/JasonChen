@@ -19,7 +19,8 @@ Raspbian code [here](https://github.com/stardust66/CoffeeMakerRaspbian).
 The school wifi can be a bit tricky to use because it uses PEAP
 authentication. This is the reason why it's difficult to connect an
 arduino to the network. wpa_supplicant can be used to connect to the
-network. [Here](https://netbeez.net/2014/10/14/connect-your-raspberry-pi-to-wireless-enterprise-environments-with-wpa-supplicant/) is a nice tutorial.
+network. [Here](https://netbeez.net/2014/10/14/connect-your-raspberry-pi-to-wireless-enterprise-environments-with-wpa-supplicant/)
+is a nice tutorial.
 `/etc/wpa_supplicant/wpa_supplicant.conf`:
 ```
 ...
