@@ -73,6 +73,29 @@ api.search("#spscoffee2k17")
 ```
 The documentation is [here](http://tweepy.readthedocs.io/en/v3.5.0/).
 
+#### Run script at boot
+We used `systemd` to run the python script at boot time. To do this, we
+created a script in `/etc/systemd/system/` called `coffee.service`. The
+script looks something like this
+```
+[Unit]
+Description=Turn on coffee machine based on website or Twitter input
+
+[Service]
+EnvironmentFile=/path/to/file/with/env/variables
+ExecStart=/path/to/script
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+The `Restart` option is very important here because the script needs
+networking to function, and networking isn't available at system boot
+time. The script will always fail at first, but it will always restart.
+This is bad programming design, so I added some error handling logic
+to the code so that it logs network failures and keeps running through
+them.
+
 ### Custom Website
 [Django](https://www.djangoproject.com/) is a popular Python web framework
 (for backends) that I used to create a
