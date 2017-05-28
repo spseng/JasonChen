@@ -115,7 +115,7 @@ could have used a lightweight framework like
 The gist of the website is that when you type the right password it lets
 you click the `Brew` button which updates a page on the website. The
 Raspberry Pi is constantly monitoring that page and once it updates the
-Pi will make coffee. 
+Pi will make coffee.
 
 ## Problems:
 ### Timezone
