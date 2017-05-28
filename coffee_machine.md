@@ -56,6 +56,15 @@ And the WiFi worked.
 This is basically a Python script with a `while` loop that uses the Twitter
 API and the urllib module to check Twitter and check the website for states.
 
+#### Monitor Twitter
+I used the Python module Tweepy because it made it easier to deal with the
+Twitter API. Authentication is made easy, and searching for a hashtag is
+as simple as
+```
+api.search("#spscoffee2k17")
+```
+The documentation is [here](http://tweepy.readthedocs.io/en/v3.5.0/).
+
 ### Custom Website
 [Django](https://www.djangoproject.com/) is a popular Python web framework
 (for backends) that I used to create a
@@ -69,6 +78,22 @@ you click the `Brew` button which updates a page on the website. The
 Raspberry Pi is constantly monitoring that page and once it updates the
 Pi will make coffee. 
 
-### TODO:
-- Add button to track if the coffee machine has been prepared.
-- Make coffee and water delivery system.
+## Problems:
+### Timezone
+At first, we didn't realize that the Twitter API used UTC as their time
+format. Checking against the current time requires a conversion.
+```
+import datetime
+...
+
+edt_time = utc_time - datetime.timedelta(hours=4)
+```
+If the solution needs to be timezone independent, we should probably use
+a timezone management module.
+
+## TODO:
+- [x] Add button to track if the coffee machine has been prepared.
+- [x] Persistent storage of the loaded variable state.
+- [ ] Coffee delivery system.
+- [ ] Water delivery system.
+
