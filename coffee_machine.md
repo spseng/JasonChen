@@ -4,6 +4,9 @@ I'm working on connecting a coffee machine to the internet so it can
 be turned on and off from a website or from twitter.
 Raspbian code [here](https://github.com/stardust66/CoffeeMakerRaspbian).
 
+#### Current State:
+<img alt="Coffee Machine" src="images/coffee_final.jpg" width="500"/>
+
 ## Steps:
 
 ### Raspberry Pi:
