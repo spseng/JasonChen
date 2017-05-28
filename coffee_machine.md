@@ -96,6 +96,14 @@ This is bad programming design, so I added some error handling logic
 to the code so that it logs network failures and keeps running through
 them.
 
+#### Safety Override
+We don't want to burn down the lab just because someone spams a twitter
+hashtag or inadvertently turns the system on when there's no water in
+it, so we added a safety override switch. The script keeps track of
+this variable named `loaded`. It updates the value to `True` when someone
+flips the switch, and to `False` after it tells the coffee machine to make
+coffee.
+
 ### Custom Website
 [Django](https://www.djangoproject.com/) is a popular Python web framework
 (for backends) that I used to create a
