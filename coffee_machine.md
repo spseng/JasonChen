@@ -131,6 +131,18 @@ edt_time = utc_time - datetime.timedelta(hours=4)
 If the solution needs to be timezone independent, you should probably use
 a timezone management module like `pytz` or `pendulum`.
 
+### Persistent Storage
+One time the network had some problems in the evening and the script
+restarted. Prior to this the `loaded` variable was set to `True`. The
+restart made the Pi lose the state of the variable, and someone had
+to go to the lab to physically press the switch for it to respond web
+or Twitter requests. A solution to this is to save the variable to a
+file so it stays between different sessions. This is achieved with
+```
+with open("loaded.state", mode="w") as f:
+    f.write(str(self.loaded))
+```
+
 ## TODO:
 - [x] Add button to track if the coffee machine has been prepared.
 - [x] Persistent storage of the loaded variable state.
