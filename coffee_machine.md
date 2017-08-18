@@ -135,7 +135,7 @@ a timezone management module like `pytz` or `pendulum`.
 One time the network had some problems in the evening and the script
 restarted. Prior to this the `loaded` variable was set to `True`. The
 restart made the Pi lose the state of the variable, and someone had
-to go to the lab to physically press the switch for it to respond web
+to go to the lab to physically press the switch for it to respond to web
 or Twitter requests. A solution to this is to save the variable to a
 file so it stays between different sessions. This is achieved with
 ```
