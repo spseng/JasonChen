@@ -144,8 +144,9 @@ with open("loaded.state", mode="w") as f:
 ```
 
 ## TODO:
-- [x] Add button to track if the coffee machine has been prepared.
-- [x] Persistent storage of the loaded variable state.
-- [ ] Coffee delivery system.
-- [ ] Water delivery system.
+- [x] Add button to track if the coffee machine has been prepared
+- [x] Persistent storage of the loaded variable state
+- [ ] Coffee delivery system
+- [ ] Water delivery system
+    - [ ] Water level sensor
 
