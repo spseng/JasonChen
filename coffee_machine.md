@@ -120,16 +120,7 @@ Pi will make coffee.
 
 ## Problems:
 ### Timezone
-At first, we didn't realize that the Twitter API used UTC as their time
-format. Checking against the current time requires a conversion.
-```
-import datetime
-...
-
-edt_time = utc_time - datetime.timedelta(hours=4)
-```
-If the solution needs to be timezone independent, you should probably use
-a timezone management module like `pytz` or `pendulum`.
+I fixed the timezone problem by fully working in UTC.
 
 ### Persistent Storage
 One time the network had some problems in the evening and the script
